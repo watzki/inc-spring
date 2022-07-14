@@ -35,6 +35,9 @@ public class Member {
     public Member() {
     }
 
+    public Member(int i, String datu, String estrella, String buklod, int grupo, int i1, boolean isKNG, boolean isMWT, boolean isPAN, boolean isKAP, boolean isPNK, boolean isSCN, boolean isKAL, boolean isILW, boolean isTSV) {
+    }
+
     public Member(Long id,
                   String lName,
                   String fName,
