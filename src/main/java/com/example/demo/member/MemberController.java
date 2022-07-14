@@ -9,8 +9,9 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "api/v1/member")
 public class MemberController {
+
     @GetMapping
-    public List<Member> hello() {
+    public List<Member> GetMembers() {
         return List.of(
                 new Member(1L, "Datu", "Edwardo", "BUKLOD", 5, 6, true, false, false, false, false, false, false, false, true, false  )
         );
