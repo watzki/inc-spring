@@ -1,6 +1,20 @@
 package com.example.demo.member;
 
+import javax.persistence.*;
+
+@Entity
+@Table
 public class Member {
+    @Id
+    @SequenceGenerator(
+            name = "member_sequence",
+            sequenceName = "member_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "member_sequence"
+    )
     private Long id;
     private String lName;
     private String fName;
