@@ -31,6 +31,8 @@ public class Member {
     private Boolean isKAL;
     private Boolean isILW;
     private Boolean isTSV;
+    @Transient
+    private Boolean isMT;
 
     public Member() {
     }
@@ -232,6 +234,15 @@ public class Member {
         isTSV = TSV;
     }
 
+
+    public Boolean getMT() {
+        return isDKN || isKNG || isMWT || isPAN || isKAP || isPNK || isSCN || isKAL || isILW || isTSV;
+    }
+
+    public void setMT(Boolean MT) {
+        isMT = MT;
+    }
+
     @Override
     public String toString() {
         return "Member{" +
@@ -251,6 +262,7 @@ public class Member {
                 ", isKAL=" + isKAL +
                 ", isILW=" + isILW +
                 ", isTSV=" + isTSV +
+                ", isMT=" + isMT +
                 '}';
     }
 }
