@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'ilaw'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_437BDB29F52A4380A94C3CDC55498564 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3EE603AF290548FBB61A831698D25B2E }}
           package: '*.jar'
