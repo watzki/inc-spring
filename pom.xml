@@ -51,10 +51,10 @@
         <configuration>
           <schemaVersion>v2</schemaVersion>
           <subscriptionId></subscriptionId>
-          <resourceGroup>demo-1657887207779-rg</resourceGroup>
-          <appName>demo-1657887207779</appName>
-          <pricingTier>F1</pricingTier>
-          <region>centralus</region>
+          <resourceGroup>inc</resourceGroup>
+          <appName>ilaw</appName>
+          <pricingTier>B1</pricingTier>
+          <region>eastus</region>
           <runtime>
             <os>Linux</os>
             <javaVersion>Java 17</javaVersion>
