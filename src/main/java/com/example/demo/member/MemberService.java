@@ -9,15 +9,19 @@ import java.util.List;
 public class MemberService {
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
 
-    @Autowired
     public List<Member> GetMembers() {
         return memberRepository.findAll();
 //        return List.of(
 //                new Member(1L, "Datu", "Edwardo", "BUKLOD", 5, 6, true, false, false, false, false, false, false, false, true, false  )
 //        );
+    }
+
+    public void addNewMember(Member member) {
+        memberRepository.save(member);
     }
 }

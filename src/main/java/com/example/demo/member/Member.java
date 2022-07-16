@@ -154,83 +154,83 @@ public class Member {
         this.grupo = grupo;
     }
 
-    public Boolean getDKN() {
+    public Boolean getIsDKN() {
         return isDKN;
     }
 
-    public void setDKN(Boolean DKN) {
+    public void setIsDKN(Boolean DKN) {
         isDKN = DKN;
     }
 
-    public Boolean getKNG() {
+    public Boolean getIsKNG() {
         return isKNG;
     }
 
-    public void setKNG(Boolean KNG) {
+    public void setIsKNG(Boolean KNG) {
         isKNG = KNG;
     }
 
-    public Boolean getMWT() {
+    public Boolean getIsMWT() {
         return isMWT;
     }
 
-    public void setMWT(Boolean MWT) {
+    public void setIsMWT(Boolean MWT) {
         isMWT = MWT;
     }
 
-    public Boolean getPAN() {
+    public Boolean getIsPAN() {
         return isPAN;
     }
 
-    public void setPAN(Boolean PAN) {
+    public void setIsPAN(Boolean PAN) {
         isPAN = PAN;
     }
 
-    public Boolean getKAP() {
+    public Boolean getIsKAP() {
         return isKAP;
     }
 
-    public void setKAP(Boolean KAP) {
+    public void setIsKAP(Boolean KAP) {
         isKAP = KAP;
     }
 
-    public Boolean getPNK() {
+    public Boolean getIsPNK() {
         return isPNK;
     }
 
-    public void setPNK(Boolean PNK) {
+    public void setIsPNK(Boolean PNK) {
         isPNK = PNK;
     }
 
-    public Boolean getSCN() {
+    public Boolean getIsSCN() {
         return isSCN;
     }
 
-    public void setSCN(Boolean SCN) {
+    public void setIsSCN(Boolean SCN) {
         isSCN = SCN;
     }
 
-    public Boolean getKAL() {
+    public Boolean getIsKAL() {
         return isKAL;
     }
 
-    public void setKAL(Boolean KAL) {
+    public void setIsKAL(Boolean KAL) {
         isKAL = KAL;
     }
 
-    public Boolean getILW() {
+    public Boolean getIsILW() {
         return isILW;
     }
 
-    public void setILW(Boolean ILW) {
+    public void setIsILW(Boolean ILW) {
         isILW = ILW;
     }
 
-    public Boolean getTSV() {
+    public Boolean getIsTSV() {
         return isTSV;
     }
 
-    public void setTSV(Boolean TSV) {
+    public void setIsTSV(Boolean TSV) {
         isTSV = TSV;
     }
 
