@@ -26,4 +26,9 @@ public class MemberController {
         System.out.println("Member Payload: " + member);
         memberService.addNewMember(member);
     }
+
+    @DeleteMapping(path = "{memberId}")
+    public void DeleteMember(@PathVariable("memberId") Long memberId) {
+        memberService.deleteMember(memberId);
+    }
 }
