@@ -62,8 +62,6 @@ public class MemberService {
         if (memberDetails.getIsILW() != null) member.setIsILW(memberDetails.getIsILW());
         if (memberDetails.getIsTSV() != null) member.setIsTSV(memberDetails.getIsTSV());
 
-        Member updatedMember = memberRepository.save(member);
-
-        return updatedMember;
+        return member;
     }
 }
