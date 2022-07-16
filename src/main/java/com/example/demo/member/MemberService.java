@@ -2,12 +2,9 @@ package com.example.demo.member;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.transaction.Transactional;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class MemberService {
@@ -20,12 +17,19 @@ public class MemberService {
 
     public List<Member> GetMembers() {
         return memberRepository.findAll();
-//        return List.of(
-//                new Member(1L, "Datu", "Edwardo", "BUKLOD", 5, 6, true, false, false, false, false, false, false, false, true, false  )
-//        );
     }
 
     public void addNewMember(Member member) {
+        if (member.getIsDKN() == null) member.setIsDKN(false);
+        if (member.getIsKNG() == null) member.setIsKNG(false);
+        if (member.getIsMWT() == null) member.setIsMWT(false);
+        if (member.getIsPAN() == null) member.setIsPAN(false);
+        if (member.getIsPNK() == null) member.setIsPNK(false);
+        if (member.getIsKAP() == null) member.setIsKAP(false);
+        if (member.getIsSCN() == null) member.setIsSCN(false);
+        if (member.getIsKAL() == null) member.setIsKAL(false);
+        if (member.getIsILW() == null) member.setIsILW(false);
+        if (member.getIsTSV() == null) member.setIsTSV(false);
         memberRepository.save(member);
     }
 
@@ -39,28 +43,26 @@ public class MemberService {
 
     @Transactional
     public Member updateMember(Long memberId, Member memberDetails) {
-        Optional<Member> member = memberRepository.findById(memberId);
-        if (!member.isPresent()) {
-            throw new IllegalStateException("Student with id " + memberId + " does not exist");
-        }
+        Member member = memberRepository.findById(memberId).orElseThrow(
+                () -> new IllegalStateException("Student with id " + memberId + " does not exist"));
 
-        if (memberDetails.getlName() != null) member.get().setlName(memberDetails.getlName());
-        if (memberDetails.getfName() != null) member.get().setfName(memberDetails.getfName());
-        if (memberDetails.getPurok() != null) member.get().setPurok(memberDetails.getPurok());
-        if (memberDetails.getGrupo() != null) member.get().setGrupo(memberDetails.getGrupo());
-        if (memberDetails.getKapisan() != null) member.get().setKapisan(memberDetails.getKapisan());
-        if (memberDetails.getIsDKN() != null) member.get().setIsDKN(memberDetails.getIsDKN());
-        if (memberDetails.getIsKNG() != null) member.get().setIsKNG(memberDetails.getIsKNG());
-        if (memberDetails.getIsMWT() != null) member.get().setIsMWT(memberDetails.getIsMWT());
-        if (memberDetails.getIsPAN() != null) member.get().setIsPAN(memberDetails.getIsPAN());
-        if (memberDetails.getIsPNK() != null) member.get().setIsPNK(memberDetails.getIsPNK());
-        if (memberDetails.getIsKAP() != null) member.get().setIsKAP(memberDetails.getIsKAP());
-        if (memberDetails.getIsSCN() != null) member.get().setIsSCN(memberDetails.getIsSCN());
-        if (memberDetails.getIsKAL() != null) member.get().setIsKAL(memberDetails.getIsKAL());
-        if (memberDetails.getIsILW() != null) member.get().setIsILW(memberDetails.getIsILW());
-        if (memberDetails.getIsTSV() != null) member.get().setIsTSV(memberDetails.getIsTSV());
+        if (memberDetails.getlName() != null) member.setlName(memberDetails.getlName());
+        if (memberDetails.getfName() != null) member.setfName(memberDetails.getfName());
+        if (memberDetails.getPurok() != null) member.setPurok(memberDetails.getPurok());
+        if (memberDetails.getGrupo() != null) member.setGrupo(memberDetails.getGrupo());
+        if (memberDetails.getKapisanan() != null) member.setKapisanan(memberDetails.getKapisanan());
+        if (memberDetails.getIsDKN() != null) member.setIsDKN(memberDetails.getIsDKN());
+        if (memberDetails.getIsKNG() != null) member.setIsKNG(memberDetails.getIsKNG());
+        if (memberDetails.getIsMWT() != null) member.setIsMWT(memberDetails.getIsMWT());
+        if (memberDetails.getIsPAN() != null) member.setIsPAN(memberDetails.getIsPAN());
+        if (memberDetails.getIsPNK() != null) member.setIsPNK(memberDetails.getIsPNK());
+        if (memberDetails.getIsKAP() != null) member.setIsKAP(memberDetails.getIsKAP());
+        if (memberDetails.getIsSCN() != null) member.setIsSCN(memberDetails.getIsSCN());
+        if (memberDetails.getIsKAL() != null) member.setIsKAL(memberDetails.getIsKAL());
+        if (memberDetails.getIsILW() != null) member.setIsILW(memberDetails.getIsILW());
+        if (memberDetails.getIsTSV() != null) member.setIsTSV(memberDetails.getIsTSV());
 
-        Member updatedMember = memberRepository.save(member.get());
+        Member updatedMember = memberRepository.save(member);
 
         return updatedMember;
     }

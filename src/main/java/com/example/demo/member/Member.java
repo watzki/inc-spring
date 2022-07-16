@@ -18,18 +18,28 @@ public class Member {
     private Long id;
     private String lName;
     private String fName;
-    private String kapisan;
+    private String kapisanan;
     private Integer purok;
     private Integer grupo;
+    @Column(columnDefinition = "boolean default false")
     private Boolean isDKN;
+    @Column(columnDefinition = "boolean default false")
     private Boolean isKNG;
+    @Column(columnDefinition = "boolean default false")
     private Boolean isMWT;
+    @Column(columnDefinition = "boolean default false")
     private Boolean isPAN;
+    @Column(columnDefinition = "boolean default false")
     private Boolean isKAP;
+    @Column(columnDefinition = "boolean default false")
     private Boolean isPNK;
+    @Column(columnDefinition = "boolean default false")
     private Boolean isSCN;
+    @Column(columnDefinition = "boolean default false")
     private Boolean isKAL;
+    @Column(columnDefinition = "boolean default false")
     private Boolean isILW;
+    @Column(columnDefinition = "boolean default false")
     private Boolean isTSV;
     @Transient
     private Boolean isMT;
@@ -43,7 +53,7 @@ public class Member {
     public Member(Long id,
                   String lName,
                   String fName,
-                  String kapisan,
+                  String kapisanan,
                   Integer purok,
                   Integer grupo,
                   Boolean isDKN,
@@ -59,7 +69,7 @@ public class Member {
         this.id = id;
         this.lName = lName;
         this.fName = fName;
-        this.kapisan = kapisan;
+        this.kapisanan = kapisanan;
         this.purok = purok;
         this.grupo = grupo;
         this.isDKN = isDKN;
@@ -76,7 +86,7 @@ public class Member {
 
     public Member(String lName,
                   String fName,
-                  String kapisan,
+                  String kapisanan,
                   Integer purok,
                   Integer grupo,
                   Boolean isDKN,
@@ -91,7 +101,7 @@ public class Member {
                   Boolean isTSV) {
         this.lName = lName;
         this.fName = fName;
-        this.kapisan = kapisan;
+        this.kapisanan = kapisanan;
         this.purok = purok;
         this.grupo = grupo;
         this.isDKN = isDKN;
@@ -130,12 +140,12 @@ public class Member {
         this.fName = fName;
     }
 
-    public String getKapisan() {
-        return kapisan;
+    public String getKapisanan() {
+        return kapisanan;
     }
 
-    public void setKapisan(String kapisan) {
-        this.kapisan = kapisan;
+    public void setKapisanan(String kapisanan) {
+        this.kapisanan = kapisanan;
     }
 
     public Integer getPurok() {
@@ -249,7 +259,7 @@ public class Member {
                 "id=" + id +
                 ", lName='" + lName + '\'' +
                 ", fName='" + fName + '\'' +
-                ", kapisan='" + kapisan + '\'' +
+                ", kapisanan='" + kapisanan + '\'' +
                 ", purok=" + purok +
                 ", grupo=" + grupo +
                 ", isDKN=" + isDKN +
